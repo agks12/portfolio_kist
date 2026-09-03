@@ -68,31 +68,37 @@ Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터�
 > 🔗 **전체 쿼리 확인:** 
 > [👉 전체 SQL 쿼리 보기](./phase_based_metric_comparison.sql)
 
-## 06. Problem Solving
+## 06. Problem Solving & Validation
 
-### Issue 01
+### Issue 01: 데이터 파이프라인 및 원천 데이터 오류 검증과 정합성 확보
 
-Problem
-↓
-Analysis
-↓
-Solution
-↓
-Result
+* **Problem (문제 상황)**
+  * 이종 소스(Excel, GIS 등)의 데이터를 가공 및 적재하고 교차 검증(`QA Query`)을 수행하는 과정에서 데이터 불일치 및 정합성 이슈 탐지
+
+* **Analysis (원인 분석)**
+  * **오류 1:** 품목 컬럼의 값이 동일하게 잘못 적재되는 현상 포착 -> 데이터 적재 단계를 추적한 결과, Apache Airflow 파이프라인의 DAG 로직 내 문제임을 확인
+  * **오류 2:** 엑셀 원본 데이터 자체에 잘못된 값이 포함되어 있는 현상 포착 -> 원천 데이터의 이상 징후 식별
+
+* **Solution (해결 방안)**
+  * Airflow 파이프라인 오류 건은 상세 분석 내용과 함께 제작 업체(개발사)에 공유하여 적재 로직 수정 요청 및 반영 완료
+  * 엑셀 원본 데이터 오류 건은 엑셀 납품 업체 측에 수정 요청하여 올바른 데이터 확보
+
+* **Result (개선 결과)**
+  * 파이프라인 및 원천 데이터의 오류를 선제적으로 차단하여 최종 데이터 마트 및 대시보드에 신뢰할 수 있는 정확한 데이터 적재 체계 확립
 
 [Before / After Image]
+<!-- 여기에 이미지를 넣어주세요 (예: ![image](이미지주소)) -->
+<img width="170" height="473" alt="품목동일" src="https://github.com/user-attachments/assets/a7adf6e4-f4c3-4bb0-a7e0-8f6fb6833e81" />
+<img width="107" height="355" alt="엑셀잘못된" src="https://github.com/user-attachments/assets/577f5f01-5ab8-4c99-b1cf-98ac846ec02a" />
 
-## 07. Validation
 
-[QA Result / Test Result]
-
-## 08. Result
+## 07. Result
 
 - 오류 사전 탐지
 - 데이터 정합성 확보
 - 36개 소품목 코드 정상 반영
 - ...
 
-## 09. Tech Stack
+## 08. Tech Stack
 
 - Python / PostgreSQL / Apache Airflow
