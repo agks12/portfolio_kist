@@ -118,7 +118,7 @@
   </div><img width="587" height="459" alt="포아송분포" src="https://github.com/user-attachments/assets/a308e780-d4c8-49fc-a089-e1e5ef511f83" width="500" />
   <p><b>[그림 4] 포아송분포 분석결과</b></p>
 </b></p>
-
+</div>
 ---
 
 ### 5.2 LabVIEW 기반 NIST SP 800-22 테스트 스위트
