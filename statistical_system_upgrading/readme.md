@@ -43,22 +43,31 @@
 
 ## 05. Technical Implementation
 
-### 5.1 데이터 검증 및 비교 파이프라인 구현
+### 5.1 데이터 검증 및 비교 파이프라인 구현(지표 1)
 
-Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터를 동일한 스키마와 기준으로 전처리한 뒤, 두 소스 간의 핵심 통계 지표를 교차 검증(`QA Query`)하기 위해 작성한 SQL 파이프라인입니다.
+Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터를 동일한 스키마와 기준으로 전처리한 뒤, 두 소스 간의 핵심 통계 지표를 교차 검증(`QA Query`)하기 위해 작성한 SQL
 
 * **주요 검증 로직:** 
   * 소스별 상이한 조건(`version_flag`, `batch_id` 패턴 등)을 반영한 공통 집계 모듈 구현
   * 부동소수점 오차를 고려한 안정적인 지표 차이(`Diff`) 연산 처리
   * 이종 포맷 간 카테고리 매핑 조건을 반영한 조인(Join) 검증 체계 구축
 
-> 🔗 **전체 소스 코드 확인:** 
-> [👉 GitHub Repository에서 전체 SQL 쿼리 보기](./data_consistency_validation.sql
+> 🔗 **전체 쿼리 확인:** 
+> [👉 전체 SQL 쿼리 보기](./data_consistency_validation.sql
 )
 
-### 5.2 ...
+### 5.2 데이터 검증 및 비교 파이프라인 구현(지표 2)
 
-[코드]
+5-1 과 같은 흐름이지만 다른 지표를 검증하는 쿼리
+
+* **주요 검증 로직:** 
+  * generate_series와 윈도우 함수를 활용한 결측 구간 복원 및 Forward Fill 처리
+  * 단계별(Phase) 누적 값과 이전 단계 간의 차이(Delta Value) 연산 및 시계열 흐름 정합성 검증
+  * 독립된 두 데이터 소스(Source A의 전처리/집계 결과 vs External Source) 간의 수치 및 변화량 교차 검증
+
+> 🔗 **전체 쿼리 확인:** 
+> [👉 전체 SQL 쿼리 보기](./phase_based_metric_comparison.sql
+)
 
 ## 06. Problem Solving
 
