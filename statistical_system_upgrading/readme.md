@@ -86,10 +86,12 @@ Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터�
 * **Result (개선 결과)**
   * 파이프라인 및 원천 데이터의 오류를 선제적으로 차단하여 최종 데이터 마트 및 대시보드에 신뢰할 수 있는 정확한 데이터 적재 체계 확립
 
-[Before / After Image]
+[Problem Image]
 <!-- 여기에 이미지를 넣어주세요 (예: ![image](이미지주소)) -->
-<img width="170" height="473" alt="품목동일" src="https://github.com/user-attachments/assets/a7adf6e4-f4c3-4bb0-a7e0-8f6fb6833e81" />
-<img width="107" height="355" alt="엑셀잘못된" src="https://github.com/user-attachments/assets/577f5f01-5ab8-4c99-b1cf-98ac846ec02a" />
+![Airflow 파이프라인 품목 컬럼 중복 적재 오류 검증 화면](https://github.com/user-attachments/assets/a7adf6e4-f4c3-4bb0-a7e0-8f6fb6833e81)
+<p align="center"><em>▲ 그림 1: Airflow 파이프라인 로직 오류로 인한 품목 컬럼 값 중복 적재 현상 검증</em></p>
+![엑셀 원본 데이터 오류 식별 및 교차 검증 화면](https://github.com/user-attachments/assets/577f5f01-5ab8-4c99-b1cf-98ac846ec02a)
+<p align="center"><em>▲ 그림 2: QA 쿼리를 통한 검증값 이상치 탐지</em></p>
 
 
 ## 07. Result
