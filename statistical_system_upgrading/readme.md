@@ -56,6 +56,7 @@ Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터�
 > [👉 전체 SQL 쿼리 보기](./data_consistency_validation.sql)
 
 
+
 ### 5.2 데이터 검증 및 비교 파이프라인 구현(지표 2)
 
 5-1 과 같은 흐름이지만 다른 지표를 검증하는 쿼리
@@ -67,6 +68,7 @@ Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터�
 
 > 🔗 **전체 쿼리 확인:** 
 > [👉 전체 SQL 쿼리 보기](./phase_based_metric_comparison.sql)
+
 
 ## 06. Problem Solving & Validation
 
@@ -82,14 +84,14 @@ Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터�
 <br>
 
 <div align="center">
-  <img width="80%" src="https://github.com/user-attachments/assets/a7adf6e4-f4c3-4bb0-a7e0-8f6fb6833e81" width="300" />
+  <img src="https://github.com/user-attachments/assets/a7adf6e4-f4c3-4bb0-a7e0-8f6fb6833e81" width="500" />
   <p><b>[그림 1] Airflow 파이프라인 로직 오류로 인한 품목 컬럼 값 중복 적재 현상 검증</b></p>
 </div>
 
 <br>
 
 <div align="center">
-  <img width="80%" src="https://github.com/user-attachments/assets/577f5f01-5ab8-4c99-b1cf-98ac846ec02a" width="300" />
+  <img src="https://github.com/user-attachments/assets/577f5f01-5ab8-4c99-b1cf-98ac846ec02a" width="300" />
   <p><b>[그림 2] QA 쿼리를 통한 검증값 이상치 탐지</b></p>
 </div>
 
