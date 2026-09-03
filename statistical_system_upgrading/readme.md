@@ -79,11 +79,21 @@ Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터�
   * **오류 1:** 품목 컬럼 값이 동일하게 잘못 적재됨 $\rightarrow$ Airflow 파이프라인 DAG 로직 문제 확인
   * **오류 2:** 엑셀 원본 데이터 자체에 잘못된 값이 포함됨 $\rightarrow$ 원천 데이터 이상 징후 식별
 
-![Airflow 파이프라인 품목 컬럼 중복 적재 오류 검증 화면](https://github.com/user-attachments/assets/a7adf6e4-f4c3-4bb0-a7e0-8f6fb6833e81)
-<p align="center"><em>[그림 1] 파이프라인 로직 오류로 인한 품목 데이터 중복 적재 포착 화면</em></p>
+<br>
 
-![엑셀 원본 데이터 오류 식별 및 교차 검증 화면](https://github.com/user-attachments/assets/577f5f01-5ab8-4c99-b1cf-98ac846ec02a)
-<p align="center"><em>[그림 2] QA 쿼리를 통한 엑셀 원본 데이터 오류 식별 화면</em></p>
+<div align="center">
+  <img width="80%" src="https://github.com/user-attachments/assets/a7adf6e4-f4c3-4bb0-a7e0-8f6fb6833e81" />
+  <p><b>[그림 1] Airflow 파이프라인 로직 오류로 인한 품목 컬럼 값 중복 적재 현상 검증</b></p>
+</div>
+
+<br>
+
+<div align="center">
+  <img width="80%" src="https://github.com/user-attachments/assets/577f5f01-5ab8-4c99-b1cf-98ac846ec02a" />
+  <p><b>[그림 2] QA 쿼리를 통한 검증값 이상치 탐지</b></p>
+</div>
+
+<br>
 
 * **Solution (해결 방안)**
   * Airflow 파이프라인 오류 건은 제작 업체에 수정 요청 및 반영 완료
