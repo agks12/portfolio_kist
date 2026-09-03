@@ -113,7 +113,14 @@ PDF 형태로 제공되는 농업 관측자료를 구조화하여 사용자가 �
 │ 답변 / 시각화         │
 └──────────────────────┘
 ```
-![Uploading image.png…]()
+
+<div align="center">
+  <img width="1268" height="532" alt="rag_아키텍처" src="https://github.com/user-attachments/assets/fddf3a68-5f38-4e94-8e30-31d3392851e8" width="800" />
+  <p><b>[그림 1] 아키텍처 다이어그램<img width="1888" height="748" alt="그림2_위치기반pdf" src="https://github.com/user-attachments/assets/3a791bec-6c36-4664-9012-bdc46b86e103" />
+</b></p>
+</div>
+<img width="1268" height="532" alt="rag_아키텍처" src="https://github.com/user-attachments/assets/fddf3a68-5f38-4e94-8e30-31d3392851e8" />
+
 
 PDF 데이터는 `pdfplumber`를 활용하여 추출하고, OpenAI Embedding API를 이용해 벡터화한 뒤 ChromaDB에 메타데이터와 함께 저장했습니다. 사용자의 질문 역시 임베딩한 후 유사 문서를 검색하고, 검색 결과를 LLM에 전달하여 답변을 생성하는 구조입니다.
 
