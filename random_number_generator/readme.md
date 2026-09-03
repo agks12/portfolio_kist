@@ -111,10 +111,11 @@
 * **포아송 / 광자 통계 모델 (Poisson / Photon Statistical Model):** 광 입사 데이터의 관측된 분포와 기대 포아송 분포를 비교하고, 카이제곱 검정 및 p-value를 도출합니다.
 
 <div align="center">
-  </div><img width="587" height="459" alt="포아송분포" src="https://github.com/user-attachments/assets/a308e780-d4c8-49fc-a089-e1e5ef511f83" width="500" />
+  </div><img width="587" height="459" alt="포아송분포" src="https://github.com/user-attachments/assets/a308e780-d4c8-49fc-a089-e1e5ef511f83" width="400" />
   <p><b>[그림 4] 포아송분포 분석결과</b></p>
 </b></p>
 </div>
+
 ---
 
 ### 5.2 LabVIEW 기반 NIST SP 800-22 테스트 스위트 🔥 [Core Highlight]
@@ -146,6 +147,7 @@
   <p><b>[그림 5] 랩뷰로 구현한 NIST SP800-22 테스트 UI</b></p>
 </b></p>
 </div>
+
 ---
 
 ## 06. Problem Solving
