@@ -53,8 +53,8 @@ Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터�
   * 이종 포맷 간 카테고리 매핑 조건을 반영한 조인(Join) 검증 체계 구축
 
 > 🔗 **전체 쿼리 확인:** 
-> [👉 전체 SQL 쿼리 보기](./data_consistency_validation.sql
-)
+> [👉 전체 SQL 쿼리 보기](./data_consistency_validation.sql)
+
 
 ### 5.2 데이터 검증 및 비교 파이프라인 구현(지표 2)
 
@@ -66,8 +66,7 @@ Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터�
   * 독립된 두 데이터 소스(Source A의 전처리/집계 결과 vs External Source) 간의 수치 및 변화량 교차 검증
 
 > 🔗 **전체 쿼리 확인:** 
-> [👉 전체 SQL 쿼리 보기](./phase_based_metric_comparison.sql
-)
+> [👉 전체 SQL 쿼리 보기](./phase_based_metric_comparison.sql)
 
 ## 06. Problem Solving
 
