@@ -114,12 +114,14 @@ PDF 형태로 제공되는 농업 관측자료를 구조화하여 사용자가 �
 └──────────────────────┘
 ```
 
+
 <div align="center">
   <img width="1268" height="532" alt="rag_아키텍처" src="https://github.com/user-attachments/assets/fddf3a68-5f38-4e94-8e30-31d3392851e8" width="800" />
-  <p><b>[그림 1] 아키텍처 다이어그램<img width="1888" height="748" alt="그림2_위치기반pdf" src="https://github.com/user-attachments/assets/3a791bec-6c36-4664-9012-bdc46b86e103" />
+  <p><b>[그림 1] 아키텍처 다이어그램</b></p>
 </b></p>
 </div>
-<img width="1268" height="532" alt="rag_아키텍처" src="https://github.com/user-attachments/assets/fddf3a68-5f38-4e94-8e30-31d3392851e8" />
+
+
 
 
 PDF 데이터는 `pdfplumber`를 활용하여 추출하고, OpenAI Embedding API를 이용해 벡터화한 뒤 ChromaDB에 메타데이터와 함께 저장했습니다. 사용자의 질문 역시 임베딩한 후 유사 문서를 검색하고, 검색 결과를 LLM에 전달하여 답변을 생성하는 구조입니다.
@@ -170,9 +172,17 @@ PDF
 
 추출한 요소의 좌표 정보를 기반으로 PDF 내에서 각 요소가 어느 위치에 존재하는지 분석했습니다.
 
+
+<div align="center">
+  <img width="1268" height="532" alt="rag_아키텍처" src="https://github.com/user-attachments/assets/fddf3a68-5f38-4e94-8e30-31d3392851e8" width="800"/>
+  <p><b>[그림 2] pdfplumber 라이브러리에서 위치 추출 이미지</b></p>
+</b></p>
+</div>
+
 ---
 
 ### 5.2 표 구조 복원
+
 
 PDF에서 추출한 표의 좌표 정보를 기반으로 행과 열을 구성하고, 텍스트 요소와 표의 좌표를 매칭하여 표 구조를 복원했습니다.
 
@@ -197,6 +207,12 @@ Text ↔ Table 좌표 매칭
 
 PDF의 모든 `x, y` 좌표 조합을 이용하여 누락된 셀을 보완하고, 최종적으로 표 형태가 아닌 데이터는 제거하여 구조화된 표를 생성했습니다.
 
+<div align="center">
+  <img width="953" height="831" alt="그림3" src="https://github.com/user-attachments/assets/b640a20a-5331-4085-9f69-889e71674206" width="500"/>
+  <p><b>[그림 3] 표 구조화 방식</b></p>
+</b></p>
+</div>
+
 ---
 
 ### 5.3 문장 단위 Chunking
@@ -220,6 +236,13 @@ X 좌표 기준 정렬
      ▼
 문단 구성
 ```
+
+<div align="center">
+  <img width="1539" height="633" alt="그림4" src="https://github.com/user-attachments/assets/a6d81596-6b4f-4e7e-b42b-cf245479cb1a"  width="800"/>
+  <p><b>[그림 4] 텍스트 구조화 방식</b></p>
+</b></p>
+</div>
+
 
 ---
 
@@ -264,6 +287,13 @@ ChromaDB
 
 문서에는 연도, 월, 품목 정보를 기반으로 문서명을 구성하고 메타데이터를 함께 저장했습니다. ChromaDB에는 원문, 벡터, 메타데이터, ID를 저장하여 이후 검색 과정에서 활용할 수 있도록 구성했습니다.
 
+<div align="center">
+  <img width="1842" height="274" alt="그림5" src="https://github.com/user-attachments/assets/2e4cdf43-fbb9-4e97-8fec-d7d59effb10a"  width="800"/>
+  <p><b>[그림 5] ChromaDB 조회</b></p>
+</b></p>
+</div>
+
+
 ---
 
 ### 5.6 Query Embedding & Similarity Search
@@ -293,6 +323,8 @@ Top-K Documents
 ### 5.7 Similar Document Removal
 
 검색된 문서 중 서로 유사한 문서가 여러 개 포함되는 문제를 해결하기 위해 유사 문서를 그룹화하고 중복 데이터를 제거하는 로직을 구현했습니다.
+
+- 코드 내 get_exact_matching_documents 함수 역활
 
 ```text
 검색 결과 K개
@@ -342,6 +374,13 @@ Answer
 ```
 
 Prompt에는 검색된 문서와 사용자의 질문을 함께 전달하고, 지정된 답변 형식에 따라 결과를 생성하도록 구성했습니다. API 응답에서 최종 답변을 추출하여 사용자에게 전달했습니다.
+
+
+<div align="center">
+  <img width="415" height="390" alt="그림8" src="https://github.com/user-attachments/assets/af794b49-66bf-41c1-82ce-ac4a94b83040"  width="600"/>
+  <p><b>[그림 6] 구현된 UI</b></p>
+</b></p>
+</div>
 
 ---
 
@@ -401,6 +440,12 @@ Semantic Chunk
 
 문서의 구조적 맥락을 유지하면서 Embedding할 수 있도록 개선했습니다.
 
+<div align="center">
+  <img width="1352" height="417" alt="그림6" src="https://github.com/user-attachments/assets/dfee3291-f872-41b6-82a5-182a640ca85b"  width="500"/>
+  <p><b>[그림 7] 결과 Chunking된 표,문장 그리고 DB의 메타데이터 </b></p>
+</b></p>
+</div>
+
 ---
 
 ### Issue 02. PDF 표 구조의 좌표 정보 불완전
@@ -446,6 +491,13 @@ Fill Function
 ```
 
 이후 텍스트 요소와 좌표를 매칭하여 최종 표를 생성했습니다.
+
+
+<div align="center">
+  <img width="1472" height="119" alt="그림7" src="https://github.com/user-attachments/assets/5dbaa78e-1366-450f-8c8c-3ccd243dbd29" />  width="700"/>
+  <p><b>[그림 8] 불완전한 표 인식 예시 </b></p>
+</b></p>
+</div>
 
 ---
 
