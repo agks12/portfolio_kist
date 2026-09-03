@@ -53,7 +53,7 @@ Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터�
   * 이종 포맷 간 카테고리 매핑 조건을 반영한 조인(Join) 검증 체계 구축
 
 > 🔗 **전체 소스 코드 확인:** 
-> [👉 GitHub Repository에서 전체 SQL 쿼리 보기](./sql/data_validation.sql)
+> [👉 GitHub Repository에서 전체 SQL 쿼리 보기](./data_validation.sql)
 
 ### 5.2 ...
 
