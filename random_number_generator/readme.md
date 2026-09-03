@@ -76,7 +76,6 @@
 | 구분 | 담당 내용 | 기여도 |
 | :--- | :--- | ---: |
 | 실험 시스템 구축 | 광검출기 및 타임 카운터 장비 구성 및 물리 실험 데이터 수집 환경 구축 | 100% |
-| 시스템 설계 | 난수 분석 및 통계 검증 파이프라인 구조 설계 | 90% |
 | 데이터 처리 | Python을 활용한 실험 원시 데이터(Hex / Binary) 변환 및 전처리 | 100% |
 | 통계 분석 | 자기상관성(95% 신뢰구간), 분포, 포아송/카이제곱 검정 구현 | 100% |
 | 표준 검증 | LabVIEW를 활용한 NIST SP 800-22 15가지 통계 테스트 구현 | 90% |
@@ -101,21 +100,21 @@
 국제 표준 암호학적 무작위성 검증 기준인 NIST SP 800-22의 **15가지 통계 테스트를 LabVIEW 환경에 전면 구현**했습니다.
 
 주요 검정 항목은 다음과 같습니다.
-* Frequency (단일 주파수 검정)
-* Block Frequency (블록 주파수 검정)
-* Runs (런 검정)
-* Longest Run of Ones (연속 1 최장 런 검정)
-* Binary Matrix Rank (이진 행렬 계수 검정)
-* Discrete Fourier Transform (이산 푸리에 변환 검정)
-* Non-overlapping Template (비중첩 템플릿 매칭 검정)
-* Overlapping Template (중첩 템플릿 매칭 검정)
-* Universal Statistical (유니버셜 통계 검정)
-* Approximate Entropy (근사 엔트로피 검정)
-* Random Excursions (랜덤 편위 검정)
-* Random Excursions Variant (랜덤 편위 변형 검정)
-* Serial (시리얼 검정)
-* Linear Complexity (선형 복잡도 검정)
-* Cumulative Sums (누적 합 검정)
+* Frequency Test
+* Block Frequency Test
+* Runs Test
+* Longest Run of Ones Test
+* Binary Matrix Rank Test
+* Discrete Fourier Transform Test
+* Non-overlapping Template Test
+* Overlapping Template Test
+* Universal Statistical Test
+* Approximate Entropy Test
+* Random Excursions Test
+* Random Excursions Variant Test
+* Serial Test
+* Linear Complexity Test
+* Cumulative Sums Test
 
 위 항목들을 바탕으로 각 테스트별 p-value를 산출하여 통계적 유의성을 검증하고 최종 무작위성 합격 여부를 판정합니다.
 
