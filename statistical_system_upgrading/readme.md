@@ -107,9 +107,37 @@ Excel 및 GIS 등 서로 다른 소스 포맷으로 적재된 원천 데이터�
 
 ## 07. Result
 
-- 오류 사전 탐지
-- 데이터 정합성 확보
+안정적인 파이프라인 운영과 철저한 검증 체계 도입으로 시스템의 신뢰성을 크게 향상했습니다.
+
+### 운영 및 데이터 측면의 개선
+* 기존 구축된 Airflow DAG의 안정적인 운영 및 이슈 발생 시 신속한 DAG 로직 수정·대응
+* PostgreSQL DB 데이터 직접 보정 및 관리를 통한 긴급 데이터 정합성 유지
+* 독자 개발한 QA Query를 파이프라인에 적용하여 오류 사전 탐지 체계 구축
+* 파이프라인 제작 및 납품 업체와의 유기적인 협업을 통한 근본 원인 해결
+* 통계조사 홈페이지 시각화 서비스 대시보드 데이터의 무결성 확보
+
+---
 
 ## 08. Tech Stack
 
-- Python / PostgreSQL / Apache Airflow
+### Data Pipeline & Orchestration
+* Apache Airflow (DAG 운영 및 로직 수정)
+
+### Database & Query
+* PostgreSQL (DB 데이터 관리 및 보정)
+* SQL (Complex Validation Queries, Window Functions)
+
+### Language
+* Python
+
+---
+
+## 09. Project Summary
+
+> **기존에 구축된 통계조사 데이터 파이프라인(Airflow)을 안정적으로 운영하며 DAG 로직 수정 및 PostgreSQL DB 데이터를 보정하고, 독자적인 QA 검증 쿼리를 파이프라인에 적용하여 데이터 정합성을 완수한 프로젝트**
+
+단순 모니터링을 넘어,
+
+**Airflow DAG 운영·수정 + DB 데이터 보정 + QA Query 검증 도입 + 유관 업체 협업을 통한 원인 차단**
+
+를 하나의 흐름으로 연결하여 **실무 서비스 환경에서 신뢰할 수 있는 데이터 적재 및 검증 운영 체계를 확립**했습니다.
