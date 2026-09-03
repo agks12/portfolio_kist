@@ -209,7 +209,7 @@ Text ↔ Table 좌표 매칭
 PDF의 모든 `x, y` 좌표 조합을 이용하여 누락된 셀을 보완하고, 최종적으로 표 형태가 아닌 데이터는 제거하여 구조화된 표를 생성했습니다.
 
 <div align="center">
-  <img width="953" height="831" alt="그림3" src="https://github.com/user-attachments/assets/b640a20a-5331-4085-9f69-889e71674206" width="500"/>
+  <img width="953" height="831" alt="그림3" src="https://github.com/user-attachments/assets/b640a20a-5331-4085-9f69-889e71674206" width="300"/>
   <p><b>[그림 3] 표 구조화 방식</b></p>
 </b></p>
 </div>
