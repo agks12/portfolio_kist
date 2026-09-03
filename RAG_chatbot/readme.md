@@ -113,6 +113,7 @@ PDF 형태로 제공되는 농업 관측자료를 구조화하여 사용자가 �
 │ 답변 / 시각화         │
 └──────────────────────┘
 ```
+![Uploading image.png…]()
 
 PDF 데이터는 `pdfplumber`를 활용하여 추출하고, OpenAI Embedding API를 이용해 벡터화한 뒤 ChromaDB에 메타데이터와 함께 저장했습니다. 사용자의 질문 역시 임베딩한 후 유사 문서를 검색하고, 검색 결과를 LLM에 전달하여 답변을 생성하는 구조입니다.
 
@@ -141,6 +142,8 @@ PDF 데이터는 `pdfplumber`를 활용하여 추출하고, OpenAI Embedding API
 ---
 
 ## 05. Technical Implementation
+
+[👉 직접 설계한 Chunking 코드 보러가기](./pdf_parsing_embedding.py)
 
 ### 5.1 PDF 위치 기반 데이터 추출
 
