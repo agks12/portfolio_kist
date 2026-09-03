@@ -69,9 +69,16 @@
                  └──────────────────────────────────────┘
 ```
 
+<div align="center">
+  <img width="942" height="277" alt="실험과정" src="https://github.com/user-attachments/assets/68def4f1-d5fc-4f15-b3fc-9db036e8b51d" width="800" />
+  <p><b>[그림 1] 실험 구성</b></p>
+</b></p>
+</div>
+
+
 ---
 
-## 03. My Contribution
+## 04. My Contribution
 
 | 구분 | 담당 내용 | 기여도 |
 | :--- | :--- | ---: |
@@ -83,19 +90,38 @@
 
 ---
 
-## 04. Technical Implementation
+## 05. Technical Implementation
 
-### 4.1 Python 기반 통계 분석 시스템
+### 5.1 Python 기반 통계 분석 시스템
 
 광검출기 실험 시퀀스의 기본적인 통계적 특성을 파악하기 위해 전처리 및 커스텀 분석 모델을 구현했습니다.
 
 * **자기상관성 분석 (Autocorrelation Analysis):** 시퀀스 요소 간의 통계적 의존성을 계산하고 95% 신뢰구간을 추정하여 물리적 독립성을 검증합니다.
-* **분포 분석 (Distribution Analysis):** 16진수 빈도 분포 및 이진 변환에 따른 확률 계산을 수행합니다.
+  
+<div align="center">
+  <img width="443" height="296" alt="자기상관" src="https://github.com/user-attachments/assets/9407ff81-1e8a-41c1-b97e-615fce9f3224" width="400" />
+  <p><b>[그림 2] 자기상관성 분석결과</b></p>
+</b></p>
+</div>
+  
+* **확률분포 분석 (Distribution Analysis):** 16진수 빈도 분포 및 이진 변환에 따른 확률 계산을 수행합니다.
+
+<div align="center">
+  <img width="956" height="307" alt="확률분포" src="https://github.com/user-attachments/assets/8dc9f60f-d230-47e2-abfd-54ad596322eb" width="800" />
+  <p><b>[그림 3] 확률분포 분석결과</b></p>
+</b></p>
+</div>
+
 * **포아송 / 광자 통계 모델 (Poisson / Photon Statistical Model):** 광 입사 데이터의 관측된 분포와 기대 포아송 분포를 비교하고, 카이제곱 검정 및 p-value를 도출합니다.
+
+<div align="center">
+  </div><img width="587" height="459" alt="포아송분포" src="https://github.com/user-attachments/assets/a308e780-d4c8-49fc-a089-e1e5ef511f83" width="500" />
+  <p><b>[그림 4] 포아송분포 분석결과</b></p>
+</b></p>
 
 ---
 
-### 4.2 LabVIEW 기반 NIST SP 800-22 테스트 스위트
+### 5.2 LabVIEW 기반 NIST SP 800-22 테스트 스위트
 
 국제 표준 암호학적 무작위성 검증 기준인 NIST SP 800-22의 **15가지 통계 테스트를 LabVIEW 환경에 전면 구현**했습니다.
 
@@ -118,21 +144,26 @@
 
 위 항목들을 바탕으로 각 테스트별 p-value를 산출하여 통계적 유의성을 검증하고 최종 무작위성 합격 여부를 판정합니다.
 
+<div align="center">
+  <img width="551" height="915" alt="nist" src="https://github.com/user-attachments/assets/ed5b6a36-eda1-49a7-8f19-fbc827e787f1" width="500" />
+  <p><b>[그림 5] 랩뷰로 구현한 NIST SP800-22 테스트 UI</b></p>
+</b></p>
+
 ---
 
-## 05. Problem Solving
+## 06. Problem Solving
 
-### 5.1 이질적 환경 간 데이터 연동 및 전처리
+### 6.1 이질적 환경 간 데이터 연동 및 전처리
 
 Python 기반의 유연한 데이터 처리 환경과 LabVIEW 기반의 정밀 측정·검증 환경 간에 대용량 시퀀스 데이터를 손실 없이 주고받을 수 있도록 데이터 파이프라인을 정비했습니다. Hex와 Binary 포맷 간의 상호 변환 과정에서 발생하는 정밀도 저하 문제를 해결하여 분석 결과의 신뢰성을 확보했습니다.
 
-### 5.2 대규모 통계 테스트의 연산 효율화
+### 6.2 대규모 통계 테스트의 연산 효율화
 
 15가지에 달하는 NIST SP 800-22 테스트와 슬라이딩 윈도우 기반의 커스텀 통계 분석을 병행하면서 발생하는 연산 부하를 최적화했습니다. NumPy와 SciPy의 벡터 연산을 활용해 처리 속도를 개선하고 대규모 데이터셋에서도 안정적인 실행이 가능하도록 구현했습니다.
 
 ---
 
-## 06. Validation
+## 07. Validation
 
 분석 및 검증 과정에서 단계별 검증을 수행하도록 구성했습니다.
 
@@ -150,7 +181,7 @@ Python 기반의 유연한 데이터 처리 환경과 LabVIEW 기반의 정밀 �
 
 ---
 
-## 07. Result
+## 08. Result
 
 커스텀 수학적 모델과 표준화된 암호학적 무작위성 테스트를 결합한 통합 검증 체계를 구축했습니다.
 
@@ -161,7 +192,7 @@ Python 기반의 유연한 데이터 처리 환경과 LabVIEW 기반의 정밀 �
 
 ---
 
-## 08. Tech Stack
+## 09. Tech Stack
 
 ### Programming Language & Core
 * Python
@@ -182,7 +213,7 @@ Python 기반의 유연한 데이터 처리 환경과 LabVIEW 기반의 정밀 �
 
 ---
 
-## 09. Project Summary
+## 10. Project Summary
 
 > **광검출기 및 타임 카운터 장비 실험을 통해 획득한 물리적 데이터의 전처리부터 커스텀 통계 분석(Python), 그리고 NIST SP 800-22 15가지 표준 통계 테스트(LabVIEW)까지의 무작위성 검증 전 과정을 시스템화한 프로젝트**
 
