@@ -100,8 +100,24 @@
 
 국제 표준 암호학적 무작위성 검증 기준인 NIST SP 800-22의 **15가지 통계 테스트를 LabVIEW 환경에 전면 구현**했습니다.
 
-* 주파수 무작위성, 런(Run) 길이 분포, 스펙트럼 특성, 이진 패턴 균일성, 엔트로피 기반 무작위성 메트릭 등을 평가합니다.
-* 각 테스트별 p-value를 산출하여 통계적 유의성을 검증하고 최종 합격 여부를 판정합니다.
+주요 검정 항목은 다음과 같습니다.
+* Frequency (단일 주파수 검정)
+* Block Frequency (블록 주파수 검정)
+* Runs (런 검정)
+* Longest Run of Ones (연속 1 최장 런 검정)
+* Binary Matrix Rank (이진 행렬 계수 검정)
+* Discrete Fourier Transform (이산 푸리에 변환 검정)
+* Non-overlapping Template (비중첩 템플릿 매칭 검정)
+* Overlapping Template (중첩 템플릿 매칭 검정)
+* Universal Statistical (유니버셜 통계 검정)
+* Approximate Entropy (근사 엔트로피 검정)
+* Random Excursions (랜덤 편위 검정)
+* Random Excursions Variant (랜덤 편위 변형 검정)
+* Serial (시리얼 검정)
+* Linear Complexity (선형 복잡도 검정)
+* Cumulative Sums (누적 합 검정)
+
+위 항목들을 바탕으로 각 테스트별 p-value를 산출하여 통계적 유의성을 검증하고 최종 무작위성 합격 여부를 판정합니다.
 
 ---
 
