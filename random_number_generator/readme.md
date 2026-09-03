@@ -95,7 +95,7 @@
 * **자기상관성 분석 (Autocorrelation Analysis):** 시퀀스 요소 간의 통계적 의존성을 계산하고 95% 신뢰구간을 추정하여 물리적 독립성을 검증합니다.
   
 <div align="center">
-  <img width="443" height="296" alt="자기상관" src="https://github.com/user-attachments/assets/9407ff81-1e8a-41c1-b97e-615fce9f3224" width="400" />
+  <img alt="자기상관" src="https://github.com/user-attachments/assets/9407ff81-1e8a-41c1-b97e-615fce9f3224" width="400" />
   <p><b>[그림 2] 자기상관성 분석결과</b></p>
 </b></p>
 </div>
@@ -103,7 +103,7 @@
 * **확률분포 분석 (Distribution Analysis):** 16진수 빈도 분포 및 이진 변환에 따른 확률 계산을 수행합니다.
 
 <div align="center">
-  <img width="956" height="307" alt="확률분포" src="https://github.com/user-attachments/assets/8dc9f60f-d230-47e2-abfd-54ad596322eb" width="800" />
+  <img alt="확률분포" src="https://github.com/user-attachments/assets/8dc9f60f-d230-47e2-abfd-54ad596322eb" width="800" />
   <p><b>[그림 3] 확률분포 분석결과</b></p>
 </b></p>
 </div>
@@ -111,12 +111,14 @@
 * **포아송 / 광자 통계 모델 (Poisson / Photon Statistical Model):** 광 입사 데이터의 관측된 분포와 기대 포아송 분포를 비교하고, 카이제곱 검정 및 p-value를 도출합니다.
 
 <div align="center">
-  </div><img width="587" height="459" alt="포아송분포" src="https://github.com/user-attachments/assets/a308e780-d4c8-49fc-a089-e1e5ef511f83" width="400" />
+  </div><img alt="포아송분포" src="https://github.com/user-attachments/assets/a308e780-d4c8-49fc-a089-e1e5ef511f83" width="400" />
   <p><b>[그림 4] 포아송분포 분석결과</b></p>
 </b></p>
 </div>
 
+
 ---
+
 
 ### 5.2 LabVIEW 기반 NIST SP 800-22 테스트 스위트 🔥 [Core Highlight]
 
@@ -143,12 +145,14 @@
 위 항목들을 바탕으로 각 테스트별 p-value를 산출하여 통계적 유의성을 검증하고 최종 무작위성 합격 여부를 판정합니다.
 
 <div align="center">
-  <img width="551" height="915" alt="nist" src="https://github.com/user-attachments/assets/ed5b6a36-eda1-49a7-8f19-fbc827e787f1" width="500" />
+  <img alt="nist" src="https://github.com/user-attachments/assets/ed5b6a36-eda1-49a7-8f19-fbc827e787f1" width="500" />
   <p><b>[그림 5] 랩뷰로 구현한 NIST SP800-22 테스트 UI</b></p>
 </b></p>
 </div>
 
+
 ---
+
 
 ## 06. Problem Solving
 
