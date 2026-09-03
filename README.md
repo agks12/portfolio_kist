@@ -1,5 +1,3 @@
-# portfolio_kist
-
 # Data Engineer Portfolio
 
 데이터의 수집부터 검증, 자동화, 분석까지
@@ -34,6 +32,9 @@ Python · pdfplumber · Vector DB
 
 Python · Probability · Statistical Analysis
 
+[View Project]
+
+---
 
 ### 03. 통계조사시스템 고도화
 데이터 표준화 → ETL → QA → 데이터마트 → 시각화 검증
