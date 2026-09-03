@@ -2,15 +2,11 @@
 
 ## 01. Overview
 
-광검출기(Photodetector)와 광 입사 시간을 기록하는 카운터 장비를 직접 구성하여 획득한 **실험 데이터(광자 도달 시간 등)를 기반으로** Random Number sequences의 생성, 분석 및 통계적 검증을 수행하는 연구용 파이프라인 시스템입니다. 
+광검출기(Photodetector)와 광 입사 시간을 기록하는 카운터 장비를 직접 구성하여 획득한 **실험 데이터(광자 도달 시간 등)를 기반으로** Random Number sequences의 생성, 분석 및 통계적 검증을 수행하는 연구 
 
-기존에는 물리 실험을 통해 얻은 원시 데이터로부터 난수를 추출하고 무작위성을 평가하기 위해 수동으로 데이터를 변환하고 개별 분석 툴을 실행해야 했으나, 이를 **Python 및 LabVIEW 기반의 통합 자동화 분석 시스템**으로 전환했습니다.
-
-이를 통해
 
 > **광검출기 물리 실험 데이터 획득 → Python 기반 통계 분석(자기상관성, 분포, 포아송 검정) → LabVIEW 기반 NIST SP 800-22 (15가지 통계 테스트) 표준 검증**
 
-까지의 복잡한 무작위성 평가 과정을 시스템이 수행하도록 구축했습니다.
 
 데이터 특성과 분석 목적에 맞게 두 가지 핵심 모듈을 연계하고, 커스텀 통계 모델과 국제 표준 크립토그라픽 테스트를 결합하여 **신뢰할 수 있는 물리적 난수(True Random Number) 품질 검증 환경을 운영**했습니다.
 
@@ -85,7 +81,7 @@
 | 실험 시스템 구축 | 광검출기 및 타임 카운터 장비 구성 및 물리 실험 데이터 수집 환경 구축 | 100% |
 | 데이터 처리 | Python을 활용한 실험 원시 데이터(Hex / Binary) 변환 및 전처리 | 100% |
 | 통계 분석 | 자기상관성(95% 신뢰구간), 분포, 포아송/카이제곱 검정 구현 | 100% |
-| 표준 검증 | LabVIEW를 활용한 NIST SP 800-22 15가지 통계 테스트 구현 | 90% |
+| 표준 검증 | LabVIEW를 활용한 NIST SP 800-22 15가지 통계 테스트 구현 | 1000% |
 | 결과 평가 | p-value 기반 무작위성 합격/불합격 판정 및 시각화 | 100% |
 
 ---
@@ -121,9 +117,10 @@
 </div>
 ---
 
-### 5.2 LabVIEW 기반 NIST SP 800-22 테스트 스위트
+### 5.2 LabVIEW 기반 NIST SP 800-22 테스트 스위트 🔥 [Core Highlight]
 
-국제 표준 암호학적 무작위성 검증 기준인 NIST SP 800-22의 **15가지 통계 테스트를 LabVIEW 환경에 전면 구현**했습니다.
+> **⭐ 본 프로젝트에서 가장 심혈을 기울인 핵심 구현 파트로**, 국제 표준 암호학적 무작위성 검증 기준인 **[NIST SP 800-22 Revision 1a (A Statistical Test Suite for Random and Pseudorandom Number Generators for Cryptographic Applications)](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-22r1a.pdf)** 논문을 바탕으로 **15가지 통계 테스트를 LabVIEW 환경에 완벽하게 직접 구현**했습니다.
+
 
 주요 검정 항목은 다음과 같습니다.
 * Frequency Test
@@ -148,7 +145,7 @@
   <img width="551" height="915" alt="nist" src="https://github.com/user-attachments/assets/ed5b6a36-eda1-49a7-8f19-fbc827e787f1" width="500" />
   <p><b>[그림 5] 랩뷰로 구현한 NIST SP800-22 테스트 UI</b></p>
 </b></p>
-
+</div>
 ---
 
 ## 06. Problem Solving
