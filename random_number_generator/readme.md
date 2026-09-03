@@ -1,4 +1,4 @@
-# Random Number Analysis & Statistical Validation System
+# Random Number Analysis & Statistical Validation
 
 ## 01. Overview
 
