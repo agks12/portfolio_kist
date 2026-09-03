@@ -174,10 +174,11 @@ PDF
 
 
 <div align="center">
-  <img width="1268" height="532" alt="rag_아키텍처" src="https://github.com/user-attachments/assets/fddf3a68-5f38-4e94-8e30-31d3392851e8" width="800"/>
+  <img width="1888" height="748" alt="그림2_위치기반pdf" src="https://github.com/user-attachments/assets/250b4b84-2fe3-432f-806e-52c88e0095e4" width="800"/>
   <p><b>[그림 2] pdfplumber 라이브러리에서 위치 추출 이미지</b></p>
 </b></p>
 </div>
+
 
 ---
 
