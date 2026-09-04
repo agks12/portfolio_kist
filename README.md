@@ -23,7 +23,7 @@ PDF 구조 분석 → 데이터 추출 → Chunking → Embedding → Vector DB
 
 Python · pdfplumber · Vector DB
 
-[View Project]
+[View Project](./RAG_chatbot)
 
 ---
 
@@ -32,7 +32,7 @@ Python · pdfplumber · Vector DB
 
 Python · Probability · Statistical Analysis
 
-[View Project]
+[View Project](./random_number_generator)
 
 ---
 
@@ -41,7 +41,7 @@ Python · Probability · Statistical Analysis
 
 Python · PostgreSQL · Apache Airflow
 
-[View Project]
+[View Project](./ststistical_system_upgrading)
 
 ---
 
@@ -50,6 +50,6 @@ Python · PostgreSQL · Apache Airflow
 
 Python · Playwright · Linux Cron
 
-[View Project]
+[View Project](./automation)
 
 ---
