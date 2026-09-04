@@ -41,7 +41,7 @@ Python · Probability · Statistical Analysis
 
 Python · PostgreSQL · Apache Airflow
 
-[View Project](./ststistical_system_upgrading)
+[View Project](./statistical_system_upgrading)
 
 ---
 
