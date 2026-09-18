@@ -63,6 +63,8 @@ data.db
     ├── weekly_overall
     ├── monthly_overall
     └── yearly_overall
+```
+
 ⚙️ 주요 구현
 Dynamic Pivot
 CASE WHEN + MAX()를 활용하여 행 형태의 원본 데이터를 조회에 적합한 컬럼 형태로 변환했습니다.
