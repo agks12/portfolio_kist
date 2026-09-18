@@ -132,8 +132,18 @@ data.db
 
 이를 통해 여러 데이터셋에 존재하는 날짜를 하나의 기준으로 통합하고, 특정 데이터가 존재하지 않는 날짜도 전체 기준 날짜를 유지할 수 있도록 구성했습니다.
 
-<img width="951" height="489" alt="샘플db_일자별" src="https://github.com/user-attachments/assets/a6153679-943e-405b-83b2-cf3d86e6f96e" />
-<img width="918" height="463" alt="샘플db_연도별" src="https://github.com/user-attachments/assets/5cf39b23-6c1d-446b-9954-5283b57494dc" />
+<div align="center">
+  <img width="951" height="489" alt="샘플db_일자별" src="https://github.com/user-attachments/assets/a6153679-943e-405b-83b2-cf3d86e6f96e" />
+  <p><b>[그림 1] 일자별 통합</b></p>
+</b></p>
+</div>
+
+<div align="center">
+  <img width="918" height="463" alt="샘플db_연도별" src="https://github.com/user-attachments/assets/5cf39b23-6c1d-446b-9954-5283b57494dc" />
+  <p><b>[그림 2] 연도별 통합</b></p>
+</b></p>
+</div>
+
 
 
 
