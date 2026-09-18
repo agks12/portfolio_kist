@@ -28,6 +28,50 @@ Raw DB의 데이터를 서비스에서 조회하기 적합한 형태로 변환�
 - 축종 / 품목 / 등급 / 거래종류 기준 데이터 Pivot
 
 
+### 계층 구조
+```text
+
+data.db
+│
+├── 📁 Code Tables
+│   ├── judgekind_code
+│   ├── item_code
+│   ├── grd_code
+│   └── unit_code
+│
+├── 📁 Raw Tables (Source)
+│   ├── pig_representative_price
+│   ├── livestock_product_inventory_trends
+│   ├── monthly_livestock_product_prices
+│   ├── interval_10day_livestock_product_prices
+│   ├── annual_livestock_product_prices
+│   ├── daily_livestock_product_prices
+│   ├── korean_chickens_prices
+│   ├── laying_hens_spent_hens_prices
+│   ├── laying_hens_chicks_prices
+│   ├── broilers_farm_gate_prices
+│   ├── broilers_wholesale_prices
+│   ├── egg_prices
+│   └── duck_prices
+│
+├── 📁 Pivot / Data Mart Tables
+│   ├── pivot_pig_representative_price
+│   ├── pivot_korean_chickens_prices
+│   ├── pivot_broilers_farm_gate_prices
+│   ├── pivot_broilers_wholesale_prices
+│   ├── pivot_egg_prices
+│   ├── pivot_interval_10day_livestock_product_prices
+│   ├── pivot_livestock_product_inventory_trends
+│   ├── pivot_daily_livestock_product_prices
+│   └── pivot_annual_livestock_product_prices
+│
+└── 📁 Overall Data Mart (Service Ready)
+    ├── daily_overall
+    ├── weekly_overall
+    ├── monthly_overall
+    └── yearly_overall
+```
+
 ### 3. Dynamic Pivot
 
 원본 데이터의 행(Row) 형태 데이터를 조회에 편리한 컬럼(Column) 형태로 변환했습니다.
