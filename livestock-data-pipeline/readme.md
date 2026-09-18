@@ -72,9 +72,6 @@ data.db
     └── yearly_overall
 ```
 
-### 3. Dynamic Pivot
-
-
 
 ### 3. Dynamic Pivot
 원본 데이터의 행(Row) 형태 데이터를 조회에 편리한 컬럼(Column) 형태로 변환했습니다.
@@ -134,6 +131,11 @@ data.db
 각 테이블의 기준 날짜를 `ymd` 컬럼으로 통일한 후, `UNION`을 이용하여 전체 날짜 목록을 생성하고 각각의 데이터를 `LEFT JOIN`했습니다.
 
 이를 통해 여러 데이터셋에 존재하는 날짜를 하나의 기준으로 통합하고, 특정 데이터가 존재하지 않는 날짜도 전체 기준 날짜를 유지할 수 있도록 구성했습니다.
+
+<img width="951" height="489" alt="샘플db_일자별" src="https://github.com/user-attachments/assets/a6153679-943e-405b-83b2-cf3d86e6f96e" />
+<img width="918" height="463" alt="샘플db_연도별" src="https://github.com/user-attachments/assets/5cf39b23-6c1d-446b-9954-5283b57494dc" />
+
+
 
 ## 🧩 Dynamic SQL
 
